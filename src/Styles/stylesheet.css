@@ -1,48 +1,49 @@
+body { margin:0; } /* Remove body margins */
+
 button, button:hover, button:active, button:focus {
     border: none;
     outline: none;
 }
 
-.main{
-    min-width: 380px;
-}
-
 /* Style for "NavBar" */
-
 .navBar-bg{
     display: flex;
     flex-wrap: wrap;
-    max-width: 750px;
+    /* max-width: 750px; */
     min-width: 380px;
-    height: 128px;
+    height: 64px;
     background-color: #f96332;
 }
 .menu-icon {
     background: url("../Icons/MenuIcon.png") center no-repeat;
-    width: 42px;
-    height: 34px;
-    margin: 66px 0px 29px 28px;
+    width: 17px;
+    height: 17px;
+    margin: auto 1rem;
+    background-size: contain;
 }
 .logo {
     background: url("../Icons/Logo.png") center no-repeat;
-    width: 42px;
-    height: 43px;
-    display: block; 
-    margin: 65px auto 20px auto;
+    width: 19px;
+    height: 19px;
+    display: block;
+    background-size: contain; 
+    margin: auto;
 }
 .search-icon {
     background: url("../Icons/SearchIcon.png") center no-repeat;
-    width: 43px;
-    height: 45px;
-    display: block; 
-    margin: 60px 30px 23px 0px;
+    width: 17px;
+    height: 17px;
+    display: block;
+    background-size: contain;
+    margin: auto 1rem;
 }
 .setting-icon {
     background: url("../Icons/SettingIcon.png") center no-repeat;
-    width: 50px;
-    height: 45px;
-    display: block; 
-    margin: 60px 23px 23px 0px;
+    width: 17px;
+    height: 17px;
+    display: block;
+    background-size: contain; 
+    margin: auto 1rem;
 }
 
 /* Style for "Header" */
@@ -50,390 +51,605 @@ button, button:hover, button:active, button:focus {
 .header-bg {
     display: flex;
     flex-wrap: wrap;
-    max-width: 750px;
+    /* max-width: 750px; */
     height: auto;
+    width: 100%;
     min-width: 380px;
-    min-height: 170px;
+    min-height: 70px;
     background-color: #ec5d2f;
 }
-.header-button{
-    width: 200px;
-    height: 72px;
-    background-color: #ec5d2f;
-    font-family: Montserrat;
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 52px;
+.header-container{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 375px;
+    height: auto;
+    min-height: 70px;
     margin: auto;
 }
+.header-button{
+    width: 100px;
+    height: 36px;
+    background-color: #ec5d2f;
+    font-family: Montserrat;
+    color: #ffffffcb;
+    font-size: 12px;
+    font-weight: 350;
+    line-height: 26px;
+    margin: auto 7px;
+}
 .header-button:hover, .header-button:focus, .header-button:active {
-    border-radius: 36px;
+    border-radius: 18px;
     border: 2px solid rgba(255, 255, 255, 0.3);
     outline: none;
+    color: #ffffff;
 }
 
 /* Style for "Channels Page" */
 
-.channel-container{
-    position: relative;
-    text-align: left;
-    margin: 0 auto;
-    width: 50%;
-    max-width: 375px;
-    max-height: 346px;
-}
 .channel-image{
+    display: flex;
+    /* max-width: 750px; */
     width: 100%;
     height: 100%;
-}
-.channel-text{
-    height: 17px;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 52px;
-    text-transform: uppercase;
-    letter-spacing: 0.88px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index:9999;
-    padding-left: 42px;
-    padding-bottom: 38px;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
 }
 .channel-overlay{
     position: absolute;
-    width: 375px;
-    height: 120px;
-    bottom: 0;
-    left: 0;    
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
 }
 .channels-grid {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    max-width: 750px;
-    min-width: 380px;
+    /* max-width: 750px; */
+    min-width: 380px; 
 }
 
+@media only screen and (min-width: 768px) {
+    .channel-container{
+        position: relative;
+        text-align: left;
+        margin: 0 auto;
+        width: 50%;
+        height: 24vw;
+        /* max-width: 375px; */
+        /* max-height: 346px; */
+    }
+    .channel-text{
+        height: 8.5px;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 2.5vw;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        padding-left: 8vh;
+        padding-bottom: 10vh;
+    }
+} 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .channel-container{
+        position: relative;
+        text-align: left;
+        margin: 0 auto;
+        width: 50%;
+        height: 50vw;
+        /* max-width: 375px; */
+        /* max-height: 346px; */
+    }
+    .channel-text{
+        height: 8.5px;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 4vw;
+        font-weight: 700;
+        line-height: 26px;
+        letter-spacing: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+} 
+
+
 /* Style for "Select Channel Page" */
+
+@media only screen and (min-width: 768px) {
+    .text-cover{
+        position: absolute;
+        top: 10%;
+        left: 0; 
+        right: 0;
+        width: 100%;
+        height: 30px;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 52px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+    .follow-button{
+        position: absolute;
+        top: 0;
+        left: 0; 
+        right: 0;
+        bottom: 0; 
+        margin: auto; 
+        width: 110px;
+        height: 35px;
+        border-radius: 36px;
+        background-color: #ffffff;
+        color: #f96332;
+        font-family: Montserrat;
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 30px;
+    }
+    .follower{
+        position: absolute;
+        width: 100%;
+        left: 0; 
+        right: 0;
+        bottom: 70px;
+        margin-left: auto; 
+        margin-right: auto; 
+        height: 18px;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 52px;
+        text-align: center;
+    }
+    .cover {
+        display: flex;
+        width: 100%;
+        /* max-width: 750px; */
+        max-height: 40vh;
+        position: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+} 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+    .text-cover{
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto; 
+        width: 100%;
+        height: 15px;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 26px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .follow-button{
+        position: absolute;
+        top: 0;
+        left: 0; 
+        right: 0;
+        bottom: 0; 
+        margin: auto; 
+        width: 100px;
+        height: 35px;
+        border-radius: 18px;
+        background-color: #ffffff;
+        color: #f96332;
+        font-family: Montserrat;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+    .follower{
+        position: absolute;
+        width: 100%;
+        left: 0; 
+        right: 0;
+        bottom: 35px;
+        margin-left: auto; 
+        margin-right: auto; 
+        height: 9px;
+        color: #ffffff;
+        font-family: Montserrat;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 26px;
+        text-align: center;
+    }
+    .cover {
+        display: flex;
+        width: 100%;
+        /* max-width: 750px; */
+        max-height: 200px;
+        position: relative;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+} 
 
 .channel-board {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
-    max-width: 750px;
+    /* max-width: 750px; */
     min-width: 380px;
-}
-.cover {
-    display: flex;
-    width: 100%;
-    max-width: 750px;
-    max-height: 400px;
-    position: relative;
-}
-.text-cover{
-    position: absolute;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto; 
-    width: 100%;
-    height: 30px;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 52px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    text-align: center;
-}
-.follow-button{
-    position: absolute;
-    top: 0;
-    left: 0; 
-    right: 0;
-    bottom: 0; 
-    margin: auto; 
-    width: 200px;
-    height: 70px;
-    border-radius: 35px;
-    background-color: #ffffff;
-    color: #f96332;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 52px;
-}
-.follower{
-    position: absolute;
-    width: 100%;
-    left: 0; 
-    right: 0;
-    bottom: 70px;
-    margin-left: auto; 
-    margin-right: auto; 
-    height: 18px;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 52px;
-    text-align: center;
 }
 
 /* Style for post */
 
-.post-container{
-    min-height: 150px;
-    max-width: 750px;
-    border-style: solid;
-    border-width: 0 0 1px 0;
-    border-color: #d4d8dd;
-}
-.post-title{
-    color: #000000;
-    font-family: Montserrat;
-    padding: 0 40px;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 50px;
-}
-.post-src{
-    width: 25%;
-    display: flex;
-    float: left;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    color: #000000;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 50px;
-}
-.post-date{
-    width: 25%;
-    display: flex;
-    position: relative;
-    color: #000000;
-    font-family: Montserrat;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 50px;
-}
-.post-src-icon{
-    background: url("../Icons/SourceIcon.png") center no-repeat;
-    width: 22px;
-    height: 32px;
-    float: left;
-    display: flex;
-    position: relative;
-    margin: 9px 10px 0 40px;
-}
-.post-date-icon{
-    background: url("../Icons/DateIcon.png") center no-repeat;
-    width: 30px;
-    height: 32px;
-    float: left;
-    display: flex;
-    position: relative;
-    margin: 9px 10px 0 0;
-}
+@media only screen and (max-width: 1001px) {
+    .post-container{
+        min-height: 75px;
+        min-width: 380px;
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: #d4d8dd;
+    }
+    .post-title{
+        color: #000000;
+        font-family: Montserrat;
+        padding: 0 20px;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+    }
+    .post-src{
+        width: 25%;
+        display: flex;
+        float: left;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    .post-date{
+        width: 25%;
+        display: flex;
+        position: relative;
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    .post-src-icon{
+        background: url("../Icons/SourceIcon.png") center no-repeat;
+        width: 11px;
+        height: 16px;
+        float: left;
+        display: flex;
+        background-size: contain;
+        position: relative;
+        margin: 4px 5px 0 20px;
+    }
+    .post-date-icon{
+        background: url("../Icons/DateIcon.png") center no-repeat;
+        width: 15px;
+        height: 16px;
+        float: left;
+        display: flex;
+        position: relative;
+        background-size: contain;
+        margin: 4px 5px 0 0;
+    }
+} 
+@media only screen and (min-width: 1001px) {
+    .post-container{
+        display: inline-block;
+        width: 25%;
+        height: 25vw;
+        max-width: 480px;
+        max-height: 480px;
+        min-height: 75px;
+        /* min-width: 380px; */
+        border-style: solid;
+        border-width: 0 0 1px 0;
+        border-color: #d4d8dd;
+        white-space: nowrap;
+    }
+    .post-title{
+        height: 50%;
+        display: flex;
+        position: relative;
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 22px;
+        font-weight: 700;
+        margin: 25px;
+        top: 0;
+        bottom: 0;
+        padding-top: 15%;
+        line-height: 25px;
+        text-align: center;
+        white-space: normal;
+        vertical-align: center;
+    }
+    .post-src{
+        display: inline-block;
+        width: 30%;
+        position: relative;
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        padding: 10px;
+    }
+    .post-date{
+        display: inline-block;
+        width: 30%;
+        right: 0;
+        position: relative;
+        color: #000000;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 25px;
+        padding: 10px;
+    }
+    .post-src-icon{
+        display: inline-block;
+        background: url("../Icons/SourceIcon.png") center no-repeat;
+        width: 11px;
+        height: 16px;
+        background-size: contain;
+        position: relative;
+        margin-left: 25px;
+    }
+    .post-date-icon{
+        display: inline-block;
+        background: url("../Icons/DateIcon.png") center no-repeat;
+        width: 15px;
+        height: 16px;
+        position: relative;
+        background-size: contain;
+        margin: 0;
+    }
+    
+} 
 
 /* Style for login page */
+.login-container, .login-bg, .login-overlay, .login-overlay:after {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* min-width: 350px; */
+}
+.login-container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
+    /* Firefox */
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+    /* Safari and Chrome */
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+
+    /* W3C */
+    display: flex;
+    box-pack: center;
+    box-align: center;
+}
+.login-overlay{
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    vertical-align: middle;
+    /* background-image: linear-gradient(to top, #000000 0%, #ff6a3a 100%); */
+}
 .login-bg{
     display: flex;
     position: relative;
-    width: 750px;
-    height: 1334px;
-    z-index: 0;
-    background: url("../Icons/Background_Image.png") center no-repeat
-}
-.login-overlay{
-    display: flex;
-    position: relative;
-    width: 750px;
-    height: 1334px;
+    background: url("../Icons/login.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     z-index: -1;
-    background-image: linear-gradient(to top, #000000 0%, #ff6a3a 100%);
+}
+.login-overlay:after {
+    position: absolute;
+    content:"";
+    top:0;
+    left:0;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,106,58,0.65) 100%);
+}
+.login-logo{
+    top: 15%;
+    margin: 0 auto 50px auto;
+    display: block;
+    position: absolute;
+    color: #FFFFFF;
+    width: 100%;
+    height: auto;
+    color: #FFFFFF;
+    -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.5); /* FF3.5+ */
+     -ms-transform: scale(0.5); /* IE9 */
+      -o-transform: scale(0.5); /* Opera 10.5+ */
+         transform: scale(0.5);
+    /* max-width: 880px; */
 }
 .big-wave{
-    display: flex;
-    position: absolute;
+    display: block;
     background: url("../Icons/BigWave.png") center no-repeat;
-    width: 224px;
+    width: 100%;
     height: 54px;
-    top: 250px;
-    left: 0;
-    right: 0;
-    margin:auto;
-    z-index: 1;
+    margin: 0 auto;
 }
 .small-wave{
-    display: flex;
-    position: absolute;
+    display: block;
     background: url("../Icons/SmallWave.png") center no-repeat;
-    width: 224px;
+    width: 100%;
     height: 54px;
-    top: 295px;
-    left: 0;
-    right: 0;
-    margin:auto;
+    margin: 0 auto;
     z-index: 1;
 }
 .n-logo{
-    display: flex;
-    position: absolute;
+    display: block;
     background: url("../Icons/N.png") center no-repeat;
-    width: 132px;
+    width: 100%;
     height: 132px;
-    top: 370px;
-    left: 0;
-    right: 0;
-    margin:auto;
+    margin: 0 auto;
     z-index: 1;
 }
-.username-box{
-    display: flex;
-    position: absolute;
+.username, .username-box, .password, .password-box, .login-button{
+    display: block;
     width: 100%;
     max-width: 650px;
     height: 110px;
-    left:0;
-    right: 0;
-    top: 840px;
-    border-radius: 55px;
-    background-color: #ffffff;
-    opacity: 0.1;
-    margin: auto;
+    margin: 0 auto;
+    /* min-width: 200px; */
 }
-.username{
+.username-box, .password-box{
+    border-radius: 55px;
+    background-color: #ffffff18;
     display: flex;
-    position: absolute;
-    max-width: 500px;
-    height: 110px;
-    left: 60px;
-    right: 0;
-    top: 845px;
-    color: #ffffff;
-    outline:none;
-    background: transparent;
-    border: none;
-    font-family: Montserrat;
-    font-size: 26px;
-    font-weight: 400;
-    padding-left: 120px; 
-    z-index: 9999;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 .password-box{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    max-width: 650px;
-    height: 110px;
-    top: 970px;
-    border-radius: 55px;
-    background-color: #ffffff;
-    left:0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto; 
-    opacity: 0.1;
+    margin-bottom: 4rem;
 }
-.password{
-    display: flex;
-    position: absolute;
-    max-width: 500px;
-    height: 110px;
-    left: 60px;
-    right: 0;
-    top: 975px;
+.username, .password{
     color: #ffffff;
     outline:none;
     background: transparent;
     border: none;
     font-family: Montserrat;
-    font-size: 26px;
+    font-size: 1.8rem;
     font-weight: 400;
-    padding-left: 120px; 
     z-index: 9999;
+    position: relative;
+    padding-right: 45px; 
+    /* vertical-align: middle; */
 }
 .user-icon{
     background: url("../Icons/UsernameIcon.png") center no-repeat;
-    display: flex;
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    left: 95px;
-    right: 0;
-    top: 870px;
-    outline:none;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    outline: none;
     border: none;
+    z-index: 9999;
+    margin: 0 30px;
 }
 .pass-icon{
     background: url("../Icons/PasswordIcon.png") center no-repeat;
-    display: flex;
-    position: absolute;
-    width: 44px;
-    height: 54px;
-    left: 95px;
-    right: 0;
-    top: 995px;
-    outline:none;
+    position: relative;
+    width: 70px;
+    height: 60px;
+    outline: none;
     border: none;
+    z-index: 1;
+    margin: 0 30px;
 }
 .login-button{
-    display: flex;
-    position: absolute;
-    width: 650px;
-    height: 110px;
-    top: 1110px;
     border-radius: 55px;
     background-color: #f96332;
-    left: 60px;
-    right: 0;
     color: #ffffff;
     font-family: Montserrat;
-    font-size: 26px;
+    font-size: 1.8rem;
     font-weight: 700;
-    display: table-cell;
-    vertical-align: middle;
+    z-index: 1;
+    overflow-wrap: break-word;
+    margin-bottom: 4rem;
+}
+.footer{
+    display: block;
+    width: 100%;
+    position: absolute;
+    max-width: 650px;
+}
+.create-acc, .help{
+    width: 50%;
+    height: 22px;
+    min-width: 100px;
+    background: transparent;
+    display: flex;
+    opacity: 0.5;
+    color: #ffffff;
+    font-family: Montserrat;
+    font-size: 1.8rem;
+    font-weight: 400;
+    display: inline-block;
 }
 .create-acc{
-    width: auto;
-    height: 22px;
-    left: 50px;
-    top: 1270px;
-    background: transparent;
-    display: flex;
-    position: absolute;
-    opacity: 0.5;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-weight: 400;
+    float: left;
+    text-align: left;
 }
 .help{
-    width: auto;
-    height: 22px;
-    right: 50px;
-    top: 1270px;
-    background: transparent;
-    display: flex;
+    float: right;
+    text-align: right;
+}
+.login-form, .login-logo{
+    -webkit-transform: scale(0.5); /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.5); /* FF3.5+ */
+     -ms-transform: scale(0.5); /* IE9 */
+      -o-transform: scale(0.5); /* Opera 10.5+ */
+         transform: scale(0.5);
+}
+.login-form{
+    display: block;
+    width: 100%;
+    top: 30%;
     position: absolute;
-    opacity: 0.5;
-    color: #ffffff;
-    font-family: Montserrat;
-    font-size: 22px;
-    font-weight: 400;
+    max-width: 650px;
+    margin: 0 auto;
+    z-index: 1;
 }
 ::placeholder{
-    color: #ffffff;
+    color: #ffffff8a;
 }

@@ -7,33 +7,33 @@ import Login from './Login';
 
 const channels = [{
         id: 0,
-        imageSrc: "/img/Fashion.png",
+        imageSrc: "/img/Fashion.jpg",
         text: "Fashion"
     }, {
         id: 1,
-        imageSrc: "/img/Science.png",
+        imageSrc: "/img/Science.jpg",
         text: "Science"
     }, {
         id: 2,
-        imageSrc: "/img/Auto.png",
+        imageSrc: "/img/Auto.jpg",
         text: "Auto"
     }, {
         id: 3,
-        imageSrc: "/img/Technology.png",
+        imageSrc: "/img/Technology.jpg",
         text: "Technology"
     }, {
         id: 4,
-        imageSrc: "/img/Finances.png",
+        imageSrc: "/img/Finances.jpg",
         text: "Finances"
     }, {
         id: 5,
-        imageSrc: "/img/Enviroment.png",
+        imageSrc: "/img/Enviroment.jpg",
         text: "Enviroment"
 }]
 
 var selectedChannel = {
     id: 1,
-    imageSrc: "/img/Science.png",
+    imageSrc: "/img/Science.jpg",
     text: "Science"
     };
 
